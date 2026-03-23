@@ -19,130 +19,130 @@ Build a greenfield REST API using Express, MongoDB with Mongoose, and TypeScript
 - Keep controller and routing integration gated by shared validation and response contracts.
 - Treat `.env` hygiene and secret protection as delivery requirements, not optional cleanup.
 
-### [ ] Task 1: Initialize Project Scaffold
+### [x] Task 1: Initialize Project Scaffold
 Depends on: None  
 Parallel with: None
 
 Subtasks
-- [ ] Initialize `package.json`
-- [ ] Create `src/config`, `src/models`, `src/controllers`, `src/routes`
-- [ ] Create `src/app.ts`
-- [ ] Create `tsconfig.json`
-- [ ] Add npm scripts for `dev`, `build`, `start`, and `test`
-- [ ] Configure `dist` as build output
-- [ ] Ensure strict TypeScript defaults are enabled
+- [x] Initialize `package.json`
+- [x] Create `src/config`, `src/models`, `src/controllers`, `src/routes`
+- [x] Create `src/app.ts`
+- [x] Create `tsconfig.json`
+- [x] Add npm scripts for `dev`, `build`, `start`, and `test`
+- [x] Configure `dist` as build output
+- [x] Ensure strict TypeScript defaults are enabled
 
 Acceptance Criteria
-- [ ] Project structure matches the PRD target layout
-- [ ] TypeScript source compiles into `dist`
-- [ ] `npm run dev` is defined
-- [ ] `npm run build` is defined
-- [ ] `npm run start` is defined
-- [ ] `npm run test` is defined
+- [x] Project structure matches the PRD target layout
+- [x] TypeScript source compiles into `dist`
+- [x] `npm run dev` is defined
+- [x] `npm run build` is defined
+- [x] `npm run start` is defined
+- [x] `npm run test` is defined
 
-### [ ] Task 2: Install and Baseline the Tech Stack
+### [x] Task 2: Install and Baseline the Tech Stack
 Depends on: Task 1  
 Parallel with: None
 
 Subtasks
-- [ ] Install runtime dependencies: `express`, `mongoose`, `dotenv`
-- [ ] Install development dependencies: `typescript`, `tsx`, `@types/node`, `@types/express`
-- [ ] Install HTTP/API test dependency: `supertest`
-- [ ] Install one test runner: `vitest` or `jest`
-- [ ] Confirm version compatibility across runtime and test tooling
-- [ ] Verify scripts align with installed tooling
+- [x] Install runtime dependencies: `express`, `mongoose`, `dotenv`
+- [x] Install development dependencies: `typescript`, `tsx`, `@types/node`, `@types/express`
+- [x] Install HTTP/API test dependency: `supertest`
+- [x] Install one test runner: `vitest` or `jest`
+- [x] Confirm version compatibility across runtime and test tooling
+- [x] Verify scripts align with installed tooling
 
 Acceptance Criteria
-- [ ] `package.json` contains the required runtime dependencies
-- [ ] `package.json` contains the required development dependencies
-- [ ] No required package is missing for local development
-- [ ] Tooling supports build, run, and test workflows without dependency errors
+- [x] `package.json` contains the required runtime dependencies
+- [x] `package.json` contains the required development dependencies
+- [x] No required package is missing for local development
+- [x] Tooling supports build, run, and test workflows without dependency errors
 
-### [ ] Task 3: Set Up Environment Configuration and Secret Hygiene
+### [x] Task 3: Set Up Environment Configuration and Secret Hygiene
 Depends on: Task 1, Task 2  
 Parallel with: Task 4, Task 5
 
 Subtasks
-- [ ] Create `.env.example`
-- [ ] Add `PORT`, `MONGO_URL`, and `MONGO_DB` placeholders to `.env.example`
-- [ ] Ensure `.env` is listed in `.gitignore`
-- [ ] Define startup validation rules for missing environment variables
-- [ ] Ensure no real credentials are committed anywhere in tracked files
-- [ ] Ensure documentation uses placeholders only
-- [ ] Document both local MongoDB and MongoDB Atlas environment patterns
+- [x] Create `.env.example`
+- [x] Add `PORT`, `MONGO_URL`, and `MONGO_DB` placeholders to `.env.example`
+- [x] Ensure `.env` is listed in `.gitignore`
+- [x] Define startup validation rules for missing environment variables
+- [x] Ensure no real credentials are committed anywhere in tracked files
+- [x] Ensure documentation uses placeholders only
+- [x] Document both local MongoDB and MongoDB Atlas environment patterns
 
 Acceptance Criteria
-- [ ] `.env.example` exists with placeholder values only
-- [ ] `.env` is ignored by git
-- [ ] No real MongoDB URI, API key, or secret appears in tracked files
-- [ ] App startup fails clearly when required environment variables are missing
-- [ ] Setup docs do not leak credentials or connection strings
+- [x] `.env.example` exists with placeholder values only
+- [x] `.env` is ignored by git
+- [x] No real MongoDB URI, API key, or secret appears in tracked files
+- [x] App startup fails clearly when required environment variables are missing
+- [x] Setup docs do not leak credentials or connection strings
 
-### [ ] Task 4: Implement Database Connection Module
+### [x] Task 4: Implement Database Connection Module
 Depends on: Task 2, Task 3  
 Parallel with: Task 5
 
 Subtasks
-- [ ] Create `src/config/db.ts`
-- [ ] Implement `connectDB()`
-- [ ] Implement `closeDB()`
-- [ ] Build connection logic from environment variables
-- [ ] Add success logging or equivalent visibility for successful connection
-- [ ] Add failure handling for database connection errors
-- [ ] Ensure disconnect logic is safe for shutdown and testing flows
+- [x] Create `src/config/db.ts`
+- [x] Implement `connectDB()`
+- [x] Implement `closeDB()`
+- [x] Build connection logic from environment variables
+- [x] Add success logging or equivalent visibility for successful connection
+- [x] Add failure handling for database connection errors
+- [x] Ensure disconnect logic is safe for shutdown and testing flows
 
 Acceptance Criteria
-- [ ] `connectDB()` opens a Mongoose connection using environment config
-- [ ] `closeDB()` closes the connection cleanly
-- [ ] Connection errors surface meaningful failure information
-- [ ] Connection lifecycle can be reused by app startup and tests
+- [x] `connectDB()` opens a Mongoose connection using environment config
+- [x] `closeDB()` closes the connection cleanly
+- [x] Connection errors surface meaningful failure information
+- [x] Connection lifecycle can be reused by app startup and tests
 
-### [ ] Task 5: Build the Event Model and Shared Types
+### [x] Task 5: Build the Event Model and Shared Types
 Depends on: Task 2  
 Parallel with: Task 3, Task 4
 
 Subtasks
-- [ ] Create `src/models/Event.ts`
-- [ ] Create `src/models/index.ts` if used for exports
-- [ ] Define TypeScript types or interfaces for event input and persisted documents
-- [ ] Add required `title` field with trimming and non-empty behavior
-- [ ] Add optional `description` field with trimming
-- [ ] Add required `date` field
-- [ ] Add optional `location` field with trimming
-- [ ] Add `category` enum with allowed values: `Meeting`, `Conference`, `Personal`, `Workshop`, `Other`
-- [ ] Add `attendees` as an array of strings
-- [ ] Enable `createdAt` and `updatedAt` timestamps
-- [ ] Export model and associated types cleanly
+- [x] Create `src/models/Event.ts`
+- [x] Create `src/models/index.ts` if used for exports
+- [x] Define TypeScript types or interfaces for event input and persisted documents
+- [x] Add required `title` field with trimming and non-empty behavior
+- [x] Add optional `description` field with trimming
+- [x] Add required `date` field
+- [x] Add optional `location` field with trimming
+- [x] Add `category` enum with allowed values: `Meeting`, `Conference`, `Personal`, `Workshop`, `Other`
+- [x] Add `attendees` as an array of strings
+- [x] Enable `createdAt` and `updatedAt` timestamps
+- [x] Export model and associated types cleanly
 
 Acceptance Criteria
-- [ ] Title is required and trimmed
-- [ ] Date is required and stored as a valid date
-- [ ] Category accepts only allowed values
-- [ ] Attendees persist as an array of strings
-- [ ] `createdAt` is persisted
-- [ ] `updatedAt` is persisted and updated correctly
-- [ ] Model exports are reusable by controller code
+- [x] Title is required and trimmed
+- [x] Date is required and stored as a valid date
+- [x] Category accepts only allowed values
+- [x] Attendees persist as an array of strings
+- [x] `createdAt` is persisted
+- [x] `updatedAt` is persisted and updated correctly
+- [x] Model exports are reusable by controller code
 
-### [ ] Task 6: Define Shared API Contracts and Error Rules
+### [x] Task 6: Define Shared API Contracts and Error Rules
 Depends on: Task 3, Task 5  
 Parallel with: Late Task 4 work
 
 Subtasks
-- [ ] Define a consistent JSON success response shape
-- [ ] Define a consistent JSON error response shape
-- [ ] Define ObjectId validation behavior before database queries
-- [ ] Define invalid ObjectId handling as `400`
-- [ ] Define missing resource handling as `404`
-- [ ] Define request validation and Mongoose validation failures as `400`
-- [ ] Define unexpected server failures as `500`
-- [ ] Define category query validation rules
-- [ ] Define date query parsing and invalid date handling rules
+- [x] Define a consistent JSON success response shape
+- [x] Define a consistent JSON error response shape
+- [x] Define ObjectId validation behavior before database queries
+- [x] Define invalid ObjectId handling as `400`
+- [x] Define missing resource handling as `404`
+- [x] Define request validation and Mongoose validation failures as `400`
+- [x] Define unexpected server failures as `500`
+- [x] Define category query validation rules
+- [x] Define date query parsing and invalid date handling rules
 
 Acceptance Criteria
-- [ ] Error semantics match the PRD exactly
-- [ ] ObjectId handling is standardized before controller implementation
-- [ ] Query validation behavior is explicit for category and date
-- [ ] Success and error response formats are predictable across endpoints
+- [x] Error semantics match the PRD exactly
+- [x] ObjectId handling is standardized before controller implementation
+- [x] Query validation behavior is explicit for category and date
+- [x] Success and error response formats are predictable across endpoints
 
 ### [ ] Task 7: Implement Controllers for CRUD and Filtering
 Depends on: Task 4, Task 5, Task 6  
@@ -252,21 +252,21 @@ Acceptance Criteria
 - [ ] Submission artifacts match the PRD deliverables
 
 ## Dependency Summary
-- [ ] Task 1 completed before any implementation work
-- [ ] Task 2 completed before environment, DB, and model work
-- [ ] Task 3 completed before final DB integration and secure documentation
-- [ ] Task 4 and Task 5 can proceed in parallel after Task 2 and Task 3 are stable
-- [ ] Task 6 should be finalized before controller implementation is considered complete
+- [x] Task 1 completed before any implementation work
+- [x] Task 2 completed before environment, DB, and model work
+- [x] Task 3 completed before final DB integration and secure documentation
+- [x] Task 4 and Task 5 can proceed in parallel after Task 2 and Task 3 are stable
+- [x] Task 6 should be finalized before controller implementation is considered complete
 - [ ] Task 7 must complete before final route and app integration
 - [ ] Task 8 must complete before full automated verification
 - [ ] Task 9 and Task 10 close the quality and delivery phase
 
 ## Safe Parallel Workstreams
-- [ ] Workstream A: Task 3 environment configuration
-- [ ] Workstream B: Task 4 database connection module
-- [ ] Workstream C: Task 5 event model and types
+- [x] Workstream A: Task 3 environment configuration
+- [x] Workstream B: Task 4 database connection module
+- [x] Workstream C: Task 5 event model and types
 - [ ] Workstream D: Early Task 10 README scaffolding after environment contract is stable
-- [ ] Merge point: Task 6 shared contracts
+- [x] Merge point: Task 6 shared contracts
 - [ ] Final integration point: Task 8 app composition
 - [ ] Quality gate: Task 9 automated verification
 - [ ] Delivery gate: Task 10 final documentation review
@@ -277,8 +277,8 @@ Acceptance Criteria
 - [ ] Date filtering works correctly
 - [ ] `connectDB()` and `closeDB()` are reusable and integrated
 - [ ] Error handling uses `200`, `201`, `400`, `404`, and `500` correctly
-- [ ] `.env.example` exists
-- [ ] `.env` is gitignored
+- [x] `.env.example` exists
+- [x] `.env` is gitignored
 - [ ] No secrets leak through committed code or docs
 - [ ] README setup and testing instructions are accurate
 - [ ] Project is ready for Postman validation and automated test execution
