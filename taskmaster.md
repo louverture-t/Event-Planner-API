@@ -174,55 +174,55 @@ Acceptance Criteria
 - [ ] Validation failures return `400`
 - [ ] Unexpected failures return `500`
 
-### [ ] Task 8: Implement Routes and Compose the Express App
+### [x] Task 8: Implement Routes and Compose the Express App
 Depends on: Task 3, Task 4, Task 6, Task 7  
 Parallel with: Early Task 10 documentation drafting
 
 Subtasks
-- [ ] Create `src/routes/eventRoutes.ts`
-- [ ] Map all required HTTP methods and paths
-- [ ] Mount routes under `/api/events`
-- [ ] Configure `express.json()` middleware
-- [ ] Load dotenv at startup
-- [ ] Connect to the database before serving requests
-- [ ] Add optional root or health route for manual verification
-- [ ] Start server using `PORT`
-- [ ] Add graceful shutdown logic that calls `closeDB()`
+- [x] Create `src/routes/eventRoutes.ts`
+- [x] Map all required HTTP methods and paths
+- [x] Mount routes under `/api/events`
+- [x] Configure `express.json()` middleware
+- [x] Load dotenv at startup
+- [x] Connect to the database before serving requests
+- [x] Add optional root or health route for manual verification
+- [x] Start server using `PORT`
+- [x] Add graceful shutdown logic that calls `closeDB()`
 
 Acceptance Criteria
-- [ ] All required routes are mounted correctly
-- [ ] Requests reach `/api/events` handlers successfully
-- [ ] App starts successfully with valid environment configuration
-- [ ] App shuts down without leaving the DB connection open
-- [ ] Route layer remains thin and controller-driven
+- [x] All required routes are mounted correctly
+- [x] Requests reach `/api/events` handlers successfully
+- [x] App starts successfully with valid environment configuration
+- [x] App shuts down without leaving the DB connection open
+- [x] Route layer remains thin and controller-driven
 
-### [ ] Task 9: Add Automated Verification Coverage
+### [x] Task 9: Add Automated Verification Coverage
 Depends on: Task 6, Task 7, Task 8  
 Parallel with: Early Task 10 documentation completion
 
 Subtasks
-- [ ] Set up test runner configuration
-- [ ] Set up API testing with Supertest
-- [ ] Add test coverage for create event
-- [ ] Add test coverage for get all events
-- [ ] Add test coverage for get event by ID
-- [ ] Add test coverage for update event
-- [ ] Add test coverage for delete event
-- [ ] Add test coverage for category filtering
-- [ ] Add test coverage for date filtering
-- [ ] Add test coverage for invalid ObjectId behavior
-- [ ] Add test coverage for validation failure behavior
-- [ ] Add test coverage for not-found behavior
-- [ ] Ensure DB setup and teardown is safe for test execution
+- [x] Set up test runner configuration
+- [x] Set up API testing with Supertest
+- [x] Add test coverage for create event
+- [x] Add test coverage for get all events
+- [x] Add test coverage for get event by ID
+- [x] Add test coverage for update event
+- [x] Add test coverage for delete event
+- [x] Add test coverage for category filtering
+- [x] Add test coverage for date filtering
+- [x] Add test coverage for invalid ObjectId behavior
+- [x] Add test coverage for validation failure behavior
+- [x] Add test coverage for not-found behavior
+- [x] Ensure DB setup and teardown is safe for test execution
 
 Acceptance Criteria
-- [ ] At least one happy-path test exists for each CRUD endpoint
-- [ ] Category filtering is tested
-- [ ] Date filtering is tested
-- [ ] Invalid ObjectId behavior is tested
-- [ ] Validation failure behavior is tested
-- [ ] Not-found behavior is tested
-- [ ] Test runs are repeatable and do not depend on leaked local secrets
+- [x] At least one happy-path test exists for each CRUD endpoint
+- [x] Category filtering is tested
+- [x] Date filtering is tested
+- [x] Invalid ObjectId behavior is tested
+- [x] Validation failure behavior is tested
+- [x] Not-found behavior is tested
+- [x] Test runs are repeatable and do not depend on leaked local secrets
 
 ### [ ] Task 10: Final Documentation and Manual Validation Assets
 Depends on: Task 3, Task 8, Task 9  
@@ -258,8 +258,9 @@ Acceptance Criteria
 - [x] Task 4 and Task 5 can proceed in parallel after Task 2 and Task 3 are stable
 - [x] Task 6 should be finalized before controller implementation is considered complete
 - [ ] Task 7 must complete before final route and app integration
-- [ ] Task 8 must complete before full automated verification
-- [ ] Task 9 and Task 10 close the quality and delivery phase
+- [x] Task 8 must complete before full automated verification
+- [x] Task 9 automated verification complete
+- [ ] Task 10 closes the delivery phase
 
 ## Safe Parallel Workstreams
 - [x] Workstream A: Task 3 environment configuration
@@ -267,14 +268,14 @@ Acceptance Criteria
 - [x] Workstream C: Task 5 event model and types
 - [ ] Workstream D: Early Task 10 README scaffolding after environment contract is stable
 - [x] Merge point: Task 6 shared contracts
-- [ ] Final integration point: Task 8 app composition
-- [ ] Quality gate: Task 9 automated verification
+- [x] Final integration point: Task 8 app composition
+- [x] Quality gate: Task 9 automated verification
 - [ ] Delivery gate: Task 10 final documentation review
 
 ## Global Done Checks
-- [ ] All 5 CRUD endpoints are implemented
-- [ ] Category filtering works correctly
-- [ ] Date filtering works correctly
+- [x] All 5 CRUD endpoints are implemented
+- [x] Category filtering works correctly
+- [x] Date filtering works correctly
 - [ ] `connectDB()` and `closeDB()` are reusable and integrated
 - [ ] Error handling uses `200`, `201`, `400`, `404`, and `500` correctly
 - [x] `.env.example` exists
