@@ -224,32 +224,32 @@ Acceptance Criteria
 - [x] Not-found behavior is tested
 - [x] Test runs are repeatable and do not depend on leaked local secrets
 
-### [ ] Task 10: Final Documentation and Manual Validation Assets
+### [x] Task 10: Final Documentation and Manual Validation Assets
 Depends on: Task 3, Task 8, Task 9  
 Parallel with: Can begin partially after Task 3
 
 Subtasks
-- [ ] Create `README.md`
-- [ ] Document the tech stack explicitly
-- [ ] Document local setup steps for Windows
-- [ ] Document local MongoDB setup path
-- [ ] Document MongoDB Atlas setup path
-- [ ] Document environment variable setup using placeholders only
-- [ ] Document build, run, and test commands
-- [ ] Document all API endpoints
-- [ ] Add Postman and manual validation checklist
-- [ ] Add edge-case validation checklist
-- [ ] Review documentation for secret leakage
-- [ ] Confirm deliverables align with the PRD
+- [x] Create `README.md`
+- [x] Document the tech stack explicitly
+- [x] Document local setup steps for Windows
+- [x] Document local MongoDB setup path
+- [x] Document MongoDB Atlas setup path
+- [x] Document environment variable setup using placeholders only
+- [x] Document build, run, and test commands
+- [x] Document all API endpoints
+- [x] Add Postman and manual validation checklist
+- [x] Add edge-case validation checklist
+- [x] Review documentation for secret leakage
+- [x] Confirm deliverables align with the PRD
 
 Acceptance Criteria
-- [ ] README matches actual implementation behavior
-- [ ] README includes Windows-friendly environment instructions
-- [ ] README includes both local MongoDB and Atlas setup paths
-- [ ] README lists Express, MongoDB with Mongoose, TypeScript, dotenv, and the chosen test stack
-- [ ] README includes no real credentials, API keys, or live connection strings
-- [ ] Manual validation steps cover CRUD, filters, and error paths
-- [ ] Submission artifacts match the PRD deliverables
+- [x] README matches actual implementation behavior
+- [x] README includes Windows-friendly environment instructions
+- [x] README includes both local MongoDB and Atlas setup paths
+- [x] README lists Express, MongoDB with Mongoose, TypeScript, dotenv, and the chosen test stack
+- [x] README includes no real credentials, API keys, or live connection strings
+- [x] Manual validation steps cover CRUD, filters, and error paths
+- [x] Submission artifacts match the PRD deliverables
 
 ## Dependency Summary
 - [x] Task 1 completed before any implementation work
@@ -260,26 +260,26 @@ Acceptance Criteria
 - [ ] Task 7 must complete before final route and app integration
 - [x] Task 8 must complete before full automated verification
 - [x] Task 9 automated verification complete
-- [ ] Task 10 closes the delivery phase
+- [x] Task 10 closes the delivery phase
 
 ## Safe Parallel Workstreams
 - [x] Workstream A: Task 3 environment configuration
 - [x] Workstream B: Task 4 database connection module
 - [x] Workstream C: Task 5 event model and types
-- [ ] Workstream D: Early Task 10 README scaffolding after environment contract is stable
+- [x] Workstream D: Early Task 10 README scaffolding after environment contract is stable
 - [x] Merge point: Task 6 shared contracts
 - [x] Final integration point: Task 8 app composition
 - [x] Quality gate: Task 9 automated verification
-- [ ] Delivery gate: Task 10 final documentation review
+- [x] Delivery gate: Task 10 final documentation review
 
 ## Global Done Checks
 - [x] All 5 CRUD endpoints are implemented
 - [x] Category filtering works correctly
 - [x] Date filtering works correctly
-- [ ] `connectDB()` and `closeDB()` are reusable and integrated
-- [ ] Error handling uses `200`, `201`, `400`, `404`, and `500` correctly
+- [x] `connectDB()` and `closeDB()` are reusable and integrated
+- [x] Error handling uses `200`, `201`, `400`, `404`, and `500` correctly
 - [x] `.env.example` exists
 - [x] `.env` is gitignored
-- [ ] No secrets leak through committed code or docs
-- [ ] README setup and testing instructions are accurate
-- [ ] Project is ready for Postman validation and automated test execution
+- [x] No secrets leak through committed code or docs
+- [x] README setup and testing instructions are accurate
+- [x] Project is ready for Postman validation and automated test execution
